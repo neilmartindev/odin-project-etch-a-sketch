@@ -27,7 +27,7 @@ creatDivs(16,16)
 function grayColor() { 
     
     const boxs = container.querySelectorAll('.box')
-    btnGray.textContent = "GRAY"
+    btnGray.textContent = "Gray"
     btnGray.addEventListener('click', () => {
         boxs.forEach(box => box.addEventListener('mouseover', ()=> {
             let RNum = Math.floor(Math.random() * 256);
@@ -43,7 +43,7 @@ grayColor()
 function rgbColors() {
     
     const boxs = container.querySelectorAll('.box')
-    btnRgb.textContent = "RGB"
+    btnRgb.textContent = "Multicoloured"
     btnRgb.addEventListener('click' ,() => {
         boxs.forEach(box => box.addEventListener('mouseover', () => {
             let R = Math.floor(Math.random() * 256);
@@ -60,7 +60,7 @@ rgbColors()
 function blackColor() {
    
     const boxs = container.querySelectorAll('.box')
-    btnBlack.textContent = 'BLACK';
+    btnBlack.textContent = 'Black';
     btnBlack.addEventListener('click', function () {
         boxs.forEach(box => box.addEventListener('mouseover', function() {
             this.style.background = 'black'
@@ -80,9 +80,9 @@ function reSet() {
 
 function reSize() {
    
-    btnSize.textContent = 'GRID SIZE'
+    btnSize.textContent = 'Grid Size'
     btnSize.addEventListener('click', () => {
-        let user = prompt('WHAT SIZE YOU WANT YOUR GRID TO BE?')
+        let user = prompt('What size do you want the grid to be?')
         if(user === null || user < 1){
             reSet();
             creatDivs(16,16);
